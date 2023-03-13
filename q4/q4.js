@@ -15,6 +15,10 @@ function showAllUsers(){
 }
 
 function getUserById(id){
+    if (typeof(id) != "number"){
+        console.log("bad parameter !");
+        return;
+    }
     for(user of arrOfUsers){
         if (user.id == id){
             console.log("id = " + user.id + " first name = " + user.firstName);
@@ -26,6 +30,10 @@ function getUserById(id){
 }
 
 function createUser(id, firstName){
+    if (typeof(id) != "number"){
+        console.log("bad parameter !");
+        return;
+    }
     arrOfUsers.push({
         id : id,
         firstName : firstName
@@ -33,6 +41,10 @@ function createUser(id, firstName){
 }
 
 function editUser(id, editedName){
+    if (typeof(id) != "number"){
+        console.log("bad parameter !");
+        return;
+    }
     for(user of arrOfUsers){
         if (user.id == id){
             user.firstName = editedName;
@@ -44,5 +56,6 @@ function editUser(id, editedName){
 }
 
 createUser(13, "ali");
-editUser(13, "morteza")
+editUser(13, "morteza");
+getUserById(33);
 showAllUsers();
