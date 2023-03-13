@@ -24,8 +24,7 @@ function getUserById(id){
     for(user of arrOfUsers){
         if (user.id == id){
             console.log("id = " + user.id + " first name = " + user.firstName);
-            // or return the object
-            break;
+            return user;
         }
     }
     console.log("user not found !"); // or return 404
@@ -50,8 +49,7 @@ function editUser(id, editedName){
     for(user of arrOfUsers){
         if (user.id == id){
             user.firstName = editedName;
-            // or return the object
-            break;
+            return user;
         }
     }
     console.log("user not found !"); // or return 404
