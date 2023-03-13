@@ -1,3 +1,5 @@
+"use strict";
+
 let user = {
     id : "2",
     firstName : "ahmadreza"
